@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 # Create your views here.
 
 def home(request):
-    return HttpResponse("Welcome to the test app")
-    
+    context = {"name": "Junior"}
+    return render(request, "djangoapp/home.html", context)
